@@ -3,6 +3,10 @@ import './App.css';
 import Nav from './views/Nav';
 
 const App = () => {
+
+  const handleClickMe = () => {
+    alert('click me');
+  };
   return (
     <div className="App">
       <Nav />
@@ -12,6 +16,9 @@ const App = () => {
         <p>
           Hello world from BLUE
         </p>
+        <div>
+          <button type='button' onClick={() => handleClickMe()}>Click me</button>
+        </div>
 
       </header>
     </div>
