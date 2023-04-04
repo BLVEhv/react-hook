@@ -7,7 +7,7 @@
         border: 1px solid;
         border-radius: 5px;
         padding: 10px;
-        margin: 0 10px;
+        margin: 10px 10px;
         max-width: 426px;
         text-align: left;
 
@@ -21,4 +21,36 @@
         }
     }
     
+}
+
+.detail-container{
+    border: 1px solid white;
+    margin:20px 20px;
+    .detail-title{
+        padding-top: 10px;
+    }
+    .detail-body{
+        padding: 10px 0;
+    }
+}
+.add-new-btn{
+    padding: 10px 0;
+}
+
+.add-new-container{
+    border: 1px solid white;
+    max-width: 400px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: left;
+    .input-data{
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+    .btn-add-new{
+        margin: 5px 5px;
+    }
 }

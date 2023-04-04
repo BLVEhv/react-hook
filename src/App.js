@@ -7,6 +7,7 @@ import Covid from './views/Covid';
 import Countdown from './views/Countdown';
 import Blog from './views/Blog';
 import BlogDetail from './views/BlogDetail';
+import AddNewBlog from './views/AddBlog';
 import {
   BrowserRouter as Router,
   Route,
@@ -62,8 +63,7 @@ const App = () => {
             <Route path="/countdown" exact element={<Countdown alertTimeUp={alertTimeUp} />} />
             <Route path="/blog" exact element={<Blog />} />
             <Route path="/blog/:id" exact element={<BlogDetail />} />
-
-
+            <Route path="/add-new-blog" exact element={<AddNewBlog />} />
           </Routes>
 
         </header >

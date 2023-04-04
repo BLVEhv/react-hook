@@ -12,6 +12,13 @@ const Blog = () => {
 
     return (
         <>
+            <div className="add-new-btn">
+                <button>
+                    <NavLink to={`/add-new-blog`}>Add new blog</NavLink>
+
+                </button>
+            </div>
+
             <div className="blog-container">
                 {newData && newData.length > 0 && newData.map(item => {
                     return (
@@ -24,6 +31,10 @@ const Blog = () => {
                         </div>
                     );
                 })}
+                {loading === true &&
+                    <tr>
+                        <td colSpan={5} style={{ textAlign: "center !important", with: '100' }}>Loading...</td>
+                    </tr>}
             </div >
         </>
     );
