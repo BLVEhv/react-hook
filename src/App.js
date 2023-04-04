@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import Todo from './views/Todo';
 import Covid from './views/Covid';
 import Countdown from './views/Countdown';
+import Blog from './views/Blog';
+import BlogDetail from './views/BlogDetail';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,7 +15,7 @@ import {
 } from "react-router-dom";
 const App = () => {
 
-  let [name, setName] = useState('BLUE');
+
 
 
   // useEffect(() => {
@@ -52,14 +54,14 @@ const App = () => {
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
 
-          <h1>
-            Hello world from {name}
-          </h1>
+
 
           <Routes>
             <Route path="/" exact element={<Covid />} />
-            <Route path="/todos" element={<Todo />} />
-            <Route path="/countdown" element={<Countdown alertTimeUp={alertTimeUp} />} />
+            <Route path="/todos" exact element={<Todo />} />
+            <Route path="/countdown" exact element={<Countdown alertTimeUp={alertTimeUp} />} />
+            <Route path="/blog" exact element={<Blog />} />
+            <Route path="/blog/:id" exact element={<BlogDetail />} />
 
 
           </Routes>

@@ -3,13 +3,14 @@ import useFetch from "../customize/fetch";
 import moment from "moment";
 
 const Covid = () => {
+    let [name, setName] = useState('BLUE');
+    const { data: dataCovid, loading, isError } = useFetch(`https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z`, true);
 
-    const today = new Date(new Date().setHours(0, 0, 0, 0));
-    const priorDate = moment().subtract(30, 'days');
-
-    const { data: dataCovid, loading, isError } = useFetch(`https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z`);
     return (
         <>
+            <h1>
+                Hello world from {name}
+            </h1>
             <h2>Covid tracking in VietNam</h2>
             <table id="customers">
                 <thead>
